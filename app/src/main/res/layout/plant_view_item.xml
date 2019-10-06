@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <com.google.android.material.card.MaterialCardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="0dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/margin_large">
+
+        >
+        <ToggleButton
+                android:id="@+id/fav_toggle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_fav_toogle"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:textOff=""
+                android:textOn=""/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="2">
+        <RelativeLayout
+                android:layout_below="@id/fav_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+        >
+
+
+
+            <TextView
+
+                    android:id="@+id/tv_plant_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monstera"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="60dp"
+                    android:textSize="@dimen/text_heading_1x"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"/>
+            <com.androdocs.circleimagelibrary.CircleImageView
+                    android:layout_below="@+id/tv_plant_title"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/iv_profile"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/kateb"
+                    app:border_width="4dp"
+                    android:layout_marginStart="@dimen/margin_large"
+                    app:border_color="@android:color/transparent"
+            />
+            <TextView
+                    android:layout_toEndOf="@id/iv_profile"
+                    android:layout_below="@id/tv_plant_title"
+                    android:id="@+id/tv__name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:text="@string/tv_by_kate_b"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"/>
+
+
+        </RelativeLayout>
+        <ImageView
+
+                android:id="@+id/iv_plant1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plant1"
+                android:scaleType="centerCrop"
+
+
+        />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+

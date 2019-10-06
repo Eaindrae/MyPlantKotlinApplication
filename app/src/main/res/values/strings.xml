@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyPlantKotlinApplication</string>
+    <string name="action_settings">Settings</string>
+    <string name="tv_by_kate_b">by Kate B</string>
+    <string name="tv_plant_description">Monstera deliciosa, the ceriman, is a species of flowering plant native to
+        tropical forests of southern Mexico, south to Panama.
+    </string>
+    <string name="tv_tips">Tips</string>
+    <string name="tv_favorite">Favorite</string>
+    <string name="tv_flowers_school">Flowers\n School</string>
+    <string name="navigation_drawer_open">Open Navigation Drawrer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawrer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_login_description">Sign In Your Account To Continue</string>
+    <string name="tv_email_id">Email ID</string>
+    <string name="tv_forget_password">Forget Password?</string>
+    <string name="tv_login">LOGIN</string>
+    <string name="nav_header_subtitle">Gardaner Guru</string>
+</resources>

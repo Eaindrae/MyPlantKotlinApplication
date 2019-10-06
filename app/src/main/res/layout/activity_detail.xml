@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:theme="@style/AppTheme.AppBarOverlay">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsinglayout"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+        >
+            <ImageView
+                    android:id="@+id/vpplantImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/plant3"/>
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+            android:tooltipText="Detail Page"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageButton
+
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:id="@+id/btn_fav"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:background="@drawable/round_corner"
+                android:padding="1dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginTop="250dp"
+                android:elevation="4dp"
+
+        />
+        <com.google.android.material.card.MaterialCardView
+                android:id="@+id/material"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/margin_large"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="280dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large">
+                <TextView
+
+                        android:id="@+id/tv_plant_detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monstera"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:textSize="@dimen/text_heading_2x"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"/>
+                <com.androdocs.circleimagelibrary.CircleImageView
+                        android:layout_below="@+id/tv_plant_detail_title"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:id="@+id/iv_detail_profile"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/kateb"
+                        app:border_width="4dp"
+                        app:border_color="@android:color/transparent"
+                />
+                <TextView
+                        android:layout_toEndOf="@id/iv_detail_profile"
+                        android:layout_below="@id/tv_plant_detail_title"
+                        android:id="@+id/tv__uploader_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:text="@string/tv_by_kate_b"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"/>
+                <TextView
+                        android:layout_below="@id/tv__uploader_name"
+                        android:id="@+id/tv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_plant_description"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:fontFamily="monospace"/>
+                <TextView
+                        android:layout_below="@id/tv_description"
+                        android:id="@+id/tv_tips"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_tips"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:textSize="@dimen/text_heading_1x"/>
+                <androidx.recyclerview.widget.RecyclerView
+                        android:layout_below="@id/tv_tips"
+                        android:id="@+id/tipsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginBottom="@dimen/margin_medium_3"
+                        android:clipToPadding="false"
+                        android:paddingStart="@dimen/margin_medium_3"
+                        android:paddingEnd="@dimen/margin_medium"
+                        tools:listitem="@layout/tips_view_item">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
